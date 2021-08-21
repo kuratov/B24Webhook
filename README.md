@@ -24,7 +24,7 @@ use kuratovru\B24Webhook\B24Webhook;
 $connector = new B24Webhook('bitrix24.site.ru');
 ```
 
-##Adding a lead
+## Adding a lead
 
 Use the `addLead` method to add a lead to Bitrix24.
 You can see the set of fields for `leadData` [on the official Bitrix website](https://dev.1c-bitrix.ru/rest_help/crm/leads/crm_lead_fields.php)
@@ -53,7 +53,7 @@ $leadData = [
 $leadId = $connector->addLead($secret, $leadData);
 ```
 
-##Checking for duplicates
+## Checking for duplicates
 
 So when adding a lead through webhooks, there is no check for duplicates, it must be done manually
 Two functions will help us with this: `checkDuplicateByPhone` and `checkDuplicateByEmail`
@@ -80,7 +80,7 @@ if ( !$connector->checkDuplicateByPhone($secret, $phones) ):
 endif;
 ```
 
-##Getting a list of products
+## Getting a list of products
 
 Use the `GetProducts` function to get information about products in Bitrix24.
 
@@ -114,9 +114,9 @@ foreach ($result as $product) {
 ```
 
 
-##Adding a product item to the lead
+## Adding a product item to the lead
 
-Use the `addProductsToLead ' function to add product items to the lead
+Use the `addProductsToLead' function to add product items to the lead
 
 ```php
 $secret = 'secretcode';
